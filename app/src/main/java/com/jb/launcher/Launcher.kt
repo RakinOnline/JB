@@ -1128,7 +1128,7 @@ class Launcher : AppCompatActivity() {
                 startActivity(Intent(Intent.ACTION_VOICE_COMMAND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
             } catch (e: Exception) {
                 try {
-                    startActivity(Intent(Intent.ACTION_VOICE_ASSIST).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+                    startActivity(Intent("android.intent.action.VOICE_ASSIST").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
                 } catch (e2: Exception) { }
             }
             a == "notif" -> try {
