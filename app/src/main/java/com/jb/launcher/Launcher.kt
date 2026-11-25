@@ -1124,8 +1124,13 @@ class Launcher : AppCompatActivity() {
             a == "drawer" -> drawer.open(0)
             a == "search" -> searchTap()
             a == "settings" -> openSettings()
-            a == "voice" -> try { startActivity(Intent(Intent.ACTION_VOICE_COMMAND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
-                catch (e: Exception) { try { startActivity(Intent(Intent.ACTION_VOICE_ASSIST).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) } catch (e2: Exception) { } }
+            a == "voice" -> try {
+                startActivity(Intent(Intent.ACTION_VOICE_COMMAND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+            } catch (e: Exception) {
+                try {
+                    startActivity(Intent(Intent.ACTION_VOICE_ASSIST).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+                } catch (e2: Exception) { }
+            }
             a == "notif" -> try {
                 Class.forName("android.app.StatusBarManager").getMethod("expandNotificationsPanel").invoke(getSystemService("statusbar"))
             } catch (e: Exception) { accessAction(AccessibilityService.GLOBAL_ACTION_NOTIFICATIONS) }
