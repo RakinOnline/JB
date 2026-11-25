@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen android:key="s_home" android:title="Home screen" android:summary="Grid, icons, search bar, scrolling, widgets">
+<PreferenceCategory android:title="Desktop grid">
+<ListPreference android:key="grid_cols" android:title="Columns" android:entries="@array/n212_e" android:entryValues="@array/n212_v" android:defaultValue="4" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="grid_rows" android:title="Rows" android:entries="@array/n212_e" android:entryValues="@array/n212_v" android:defaultValue="4" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="pad_w" android:title="Width padding" android:entries="@array/pad_e" android:entryValues="@array/pad_v" android:defaultValue="small" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="pad_h" android:title="Height padding" android:entries="@array/pad_e" android:entryValues="@array/pad_v" android:defaultValue="small" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="lock_desktop" android:title="Lock desktop" android:defaultValue="false" android:summary="Prevent moving or removing icons and widgets" />
+<ListPreference android:key="orientation" android:title="Screen orientation" android:entries="@array/orient_e" android:entryValues="@array/orient_v" android:defaultValue="portrait" app:useSimpleSummaryProvider="true" />
+<Preference android:key="pages" android:title="Edit home screen pages" android:summary="Add, remove, reorder, set default page" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Desktop icon layout">
+<ListPreference android:key="h_scale" android:title="Icon size" android:entries="@array/scale_e" android:entryValues="@array/scale_v" android:defaultValue="100" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="h_labels" android:title="Show labels" android:defaultValue="true" />
+<ListPreference android:key="h_font" android:title="Label font" android:entries="@array/font_e" android:entryValues="@array/font_v" android:defaultValue="regular" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="h_color" android:title="Label color (#RRGGBB or 'dynamic')" android:defaultValue="#FFFFFF" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="h_shadow" android:title="Label shadow" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="h_single" android:title="Single-line labels" android:defaultValue="true" />
+<ListPreference android:key="h_lsize" android:title="Label size (sp)" android:entries="@array/lsize_e" android:entryValues="@array/lsize_v" android:defaultValue="12" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Search bar">
+<ListPreference android:key="search_pos" android:title="Position" android:entries="@array/search_pos_e" android:entryValues="@array/search_pos_v" android:defaultValue="top" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="search_shape" android:title="Shape" android:entries="@array/sshape_e" android:entryValues="@array/sshape_v" android:defaultValue="rounded" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="search_radius" android:title="Corner radius (dp)" android:entries="@array/radius_e" android:entryValues="@array/radius_v" android:defaultValue="2" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="search_fill" android:title="Fill color" android:defaultValue="#77777A" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="search_alpha" android:title="Transparency (opacity)" android:entries="@array/pct_e" android:entryValues="@array/pct_v" android:defaultValue="80" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="search_border" android:title="Border color" android:defaultValue="#FFFFFF" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="search_bw" android:title="Border width (dp)" android:entries="@array/bw_e" android:entryValues="@array/bw_v" android:defaultValue="0" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="search_left" android:title="Left logo" android:entries="@array/logo_l_e" android:entryValues="@array/logo_l_v" android:defaultValue="g_text" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="search_right" android:title="Right icon" android:entries="@array/logo_r_e" android:entryValues="@array/logo_r_v" android:defaultValue="mic" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="search_provider" android:title="Tap opens" android:entries="@array/provider_e" android:entryValues="@array/provider_v" android:defaultValue="search" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="search_url" android:title="Custom search URL" android:defaultValue="https://www.google.com" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Scrolling &amp; indicator">
+<ListPreference android:key="scroll_effect" android:title="Scroll effect" android:entries="@array/effect_e" android:entryValues="@array/effect_v" android:defaultValue="simple" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="wall_scroll" android:title="Wallpaper scrolling" android:entries="@array/wall_e" android:entryValues="@array/wall_v" android:defaultValue="on" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="infinite" android:title="Infinite scroll" android:defaultValue="false" />
+<ListPreference android:key="ind_style" android:title="Page indicator" android:entries="@array/ind_e" android:entryValues="@array/ind_v" android:defaultValue="line" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="ind_active" android:title="Indicator active color" android:defaultValue="#FFFFFF" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="ind_inactive" android:title="Indicator inactive color" android:defaultValue="#66FFFFFF" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Widgets &amp; behavior">
+<SwitchPreferenceCompat android:key="add_new_apps" android:title="Add icon for new apps" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="widget_overlap" android:title="Widget overlap" android:defaultValue="false" android:summary="Allow widgets over icons and widgets" />
+<SwitchPreferenceCompat android:key="overlap_place" android:title="Overlap when placing" android:defaultValue="false" android:summary="Drop on an icon without making a folder" />
+<ListPreference android:key="widget_radius" android:title="Widget corner radius (dp)" android:entries="@array/radius_e" android:entryValues="@array/radius_v" android:defaultValue="0" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="widget_nopad" android:title="Remove widget padding" android:defaultValue="false" />
+<SwitchPreferenceCompat android:key="resize_any" android:title="Resize any widget" android:defaultValue="true" android:summary="Resize dialog ignores widget size limits" />
+</PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen android:key="s_drawer" android:title="App drawer" android:summary="Style, tabs, search, fast scroll">
+<PreferenceCategory android:title="Layout">
+<ListPreference android:key="d_style" android:title="Drawer style" android:entries="@array/dstyle_e" android:entryValues="@array/dstyle_v" android:defaultValue="horizontal" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="d_cols" android:title="Columns (portrait)" android:entries="@array/n28_e" android:entryValues="@array/n28_v" android:defaultValue="4" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="d_rows" android:title="Rows (portrait)" android:entries="@array/n39_e" android:entryValues="@array/n39_v" android:defaultValue="5" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="d_cols_l" android:title="Columns (landscape)" android:entries="@array/n28_e" android:entryValues="@array/n28_v" android:defaultValue="6" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="d_rows_l" android:title="Rows (landscape)" android:entries="@array/n39_e" android:entryValues="@array/n39_v" android:defaultValue="3" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="d_effect" android:title="Scroll effect" android:entries="@array/effect_e" android:entryValues="@array/effect_v" android:defaultValue="simple" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="d_card" android:title="Card background" android:defaultValue="false" android:summary="Floating rounded card instead of full screen" />
+<EditTextPreference android:key="d_bg" android:title="Background color" android:defaultValue="#000000" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="d_alpha" android:title="Background opacity" android:entries="@array/pct_e" android:entryValues="@array/pct_v" android:defaultValue="100" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="d_card_color" android:title="Card color" android:defaultValue="#1A1A1A" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Drawer icon layout">
+<ListPreference android:key="d_scale" android:title="Icon size" android:entries="@array/scale_e" android:entryValues="@array/scale_v" android:defaultValue="100" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="d_labels" android:title="Show labels" android:defaultValue="true" />
+<ListPreference android:key="d_font" android:title="Label font" android:entries="@array/font_e" android:entryValues="@array/font_v" android:defaultValue="regular" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="d_color" android:title="Label color (#RRGGBB or 'dynamic')" android:defaultValue="#FFFFFF" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="d_shadow" android:title="Label shadow" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="d_single" android:title="Single-line labels" android:defaultValue="true" />
+<ListPreference android:key="d_lsize" android:title="Label size (sp)" android:entries="@array/lsize_e" android:entryValues="@array/lsize_v" android:defaultValue="12" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Features">
+<ListPreference android:key="d_strip" android:title="Top row of apps" android:entries="@array/strip_e" android:entryValues="@array/strip_v" android:defaultValue="none" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="d_search" android:title="Search bar" android:entries="@array/dsearch_e" android:entryValues="@array/dsearch_v" android:defaultValue="none" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="d_keyboard" android:title="Auto-open keyboard" android:defaultValue="false" />
+<SwitchPreferenceCompat android:key="d_fast" android:title="Fast scrollbar" android:defaultValue="false" />
+<EditTextPreference android:key="d_fast_color" android:title="Fast scroll accent color" android:defaultValue="#33B5E5" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="swipe_indicator" android:title="Swipe indicator above dock" android:defaultValue="false" />
+<SwitchPreferenceCompat android:key="d_remember" android:title="Remember position" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="d_close" android:title="Reset drawer after launching an app" android:defaultValue="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Tabs">
+<ListPreference android:key="d_tabs_pos" android:title="Tab bar placement" android:entries="@array/tabpos_e" android:entryValues="@array/tabpos_v" android:defaultValue="top" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="d_tab_style" android:title="Tab style" android:entries="@array/tabstyle_e" android:entryValues="@array/tabstyle_v" android:defaultValue="underline" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="d_tab_sel" android:title="Selected tab color" android:defaultValue="#33B5E5" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="d_tab_bg" android:title="Pill color" android:defaultValue="#33B5E5" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="d_keep_main" android:title="Keep tabbed apps in main tab" android:defaultValue="true" />
+<Preference android:key="tabs_new" android:title="Create tab" />
+<Preference android:key="tabs_edit" android:title="Edit tabs" />
+<Preference android:key="hidden" android:title="Hide apps" />
+</PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen android:key="s_dock" android:title="Dock" android:summary="Pages, icons, background">
+<PreferenceCategory android:title="Dock">
+<SwitchPreferenceCompat android:key="dock_on" android:title="Enable dock" android:defaultValue="true" />
+<ListPreference android:key="dock_pages" android:title="Dock pages" android:entries="@array/n15_e" android:entryValues="@array/n15_v" android:defaultValue="1" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="dock_n" android:title="Icons per page" android:entries="@array/n112_e" android:entryValues="@array/n112_v" android:defaultValue="5" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="dock_apps_btn" android:title="Show apps button" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="dock_divider" android:title="Divider line above dock" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="dock_auto_close" android:title="Return to first dock page after launching" android:defaultValue="true" />
+<ListPreference android:key="dock_shape" android:title="Background shape" android:entries="@array/dockshape_e" android:entryValues="@array/dockshape_v" android:defaultValue="none" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="dock_color" android:title="Background color" android:defaultValue="#000000" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="dock_alpha" android:title="Background opacity" android:entries="@array/pct_e" android:entryValues="@array/pct_v" android:defaultValue="0" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="dock_pad_w" android:title="Width padding" android:entries="@array/pad_e" android:entryValues="@array/pad_v" android:defaultValue="small" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="dock_pad_h" android:title="Height padding" android:entries="@array/pad_e" android:entryValues="@array/pad_v" android:defaultValue="small" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Dock icon layout">
+<ListPreference android:key="k_scale" android:title="Icon size" android:entries="@array/scale_e" android:entryValues="@array/scale_v" android:defaultValue="100" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="k_labels" android:title="Show labels" android:defaultValue="false" />
+<ListPreference android:key="k_font" android:title="Label font" android:entries="@array/font_e" android:entryValues="@array/font_v" android:defaultValue="regular" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="k_color" android:title="Label color (#RRGGBB or 'dynamic')" android:defaultValue="#FFFFFF" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="k_shadow" android:title="Label shadow" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="k_single" android:title="Single-line labels" android:defaultValue="true" />
+<ListPreference android:key="k_lsize" android:title="Label size (sp)" android:entries="@array/lsize_e" android:entryValues="@array/lsize_v" android:defaultValue="12" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen android:key="s_folders" android:title="Folders" android:summary="Preview, shape, open style">
+<PreferenceCategory android:title="Closed folder">
+<ListPreference android:key="f_preview" android:title="Preview style" android:entries="@array/fprev_e" android:entryValues="@array/fprev_v" android:defaultValue="grid" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_shape" android:title="Background shape" android:entries="@array/fshape_e" android:entryValues="@array/fshape_v" android:defaultValue="circle" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="f_bg" android:title="Background color" android:defaultValue="#FFFFFF" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_alpha" android:title="Background opacity" android:entries="@array/pct_e" android:entryValues="@array/pct_v" android:defaultValue="30" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="f_swipe" android:title="Swipe up to open" android:defaultValue="false" android:summary="Tap launches the first app, swipe up opens the folder" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Opened folder">
+<ListPreference android:key="f_open" android:title="Open style" android:entries="@array/fopen_e" android:entryValues="@array/fopen_v" android:defaultValue="popup" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_cols" android:title="Columns" android:entries="@array/n28_e" android:entryValues="@array/n28_v" android:defaultValue="3" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_rows" android:title="Rows" android:entries="@array/n28_e" android:entryValues="@array/n28_v" android:defaultValue="4" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_scroll" android:title="Scroll direction" android:entries="@array/fscroll_e" android:entryValues="@array/fscroll_v" android:defaultValue="horizontal" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="f_card" android:title="Card color" android:defaultValue="#222222" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_card_alpha" android:title="Card opacity" android:entries="@array/pct_e" android:entryValues="@array/pct_v" android:defaultValue="100" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_radius" android:title="Card corner radius (dp)" android:entries="@array/radius_e" android:entryValues="@array/radius_v" android:defaultValue="16" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_dim" android:title="Background dim" android:entries="@array/pct_e" android:entryValues="@array/pct_v" android:defaultValue="40" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="f_title" android:title="Show folder title" android:defaultValue="true" />
+<EditTextPreference android:key="f_title_color" android:title="Title color" android:defaultValue="#FFFFFF" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="f_title_font" android:title="Title font" android:entries="@array/font_e" android:entryValues="@array/font_v" android:defaultValue="regular" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="f_autoclose" android:title="Close after launching an app" android:defaultValue="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Folder icon layout">
+<ListPreference android:key="f_scale" android:title="Icon size" android:entries="@array/scale_e" android:entryValues="@array/scale_v" android:defaultValue="100" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="f_labels" android:title="Show labels" android:defaultValue="true" />
+<ListPreference android:key="f_font" android:title="Label font" android:entries="@array/font_e" android:entryValues="@array/font_v" android:defaultValue="regular" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="f_color" android:title="Label color (#RRGGBB or 'dynamic')" android:defaultValue="#FFFFFF" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="f_shadow" android:title="Label shadow" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="f_single" android:title="Single-line labels" android:defaultValue="true" />
+<ListPreference android:key="f_lsize" android:title="Label size (sp)" android:entries="@array/lsize_e" android:entryValues="@array/lsize_v" android:defaultValue="12" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen android:key="s_look" android:title="Look &amp; feel" android:summary="Icons, colors, night mode, animations, status bar">
+<PreferenceCategory android:title="Icons">
+<ListPreference android:key="icon_pack" android:title="Icon pack" android:entries="@array/ishape_e" android:entryValues="@array/ishape_v" android:defaultValue="builtin" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="icon_shape" android:title="Icon shape" android:entries="@array/ishape_e" android:entryValues="@array/ishape_v" android:defaultValue="default" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="reshape_legacy" android:title="Reshape legacy icons" android:defaultValue="false" android:summary="Put old icons on a generated adaptive background" />
+<SwitchPreferenceCompat android:key="icon_norm" android:title="Normalize icon size" android:defaultValue="false" />
+<SwitchPreferenceCompat android:key="darken_icons" android:title="Darken icons at night" android:defaultValue="false" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Colors &amp; night mode">
+<ListPreference android:key="accent_mode" android:title="Accent color" android:entries="@array/accent_e" android:entryValues="@array/accent_v" android:defaultValue="holo" app:useSimpleSummaryProvider="true" />
+<EditTextPreference android:key="accent_hex" android:title="Custom accent (#RRGGBB)" android:defaultValue="#33B5E5" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="night_mode" android:title="Theme" android:entries="@array/night_e" android:entryValues="@array/night_v" android:defaultValue="dark" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="night_start" android:title="Night starts (hour)" android:entries="@array/hours_e" android:entryValues="@array/hours_v" android:defaultValue="19" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="night_end" android:title="Night ends (hour)" android:entries="@array/hours_e" android:entryValues="@array/hours_v" android:defaultValue="7" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="night_search" android:title="Dark search bar" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="night_drawer" android:title="Dark app drawer" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="night_folder" android:title="Dark folders" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="night_settings" android:title="Dark settings" android:defaultValue="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Animations &amp; feedback">
+<ListPreference android:key="anim_speed" android:title="Animation speed" android:entries="@array/speed_e" android:entryValues="@array/speed_v" android:defaultValue="launcher" app:useSimpleSummaryProvider="true" />
+<ListPreference android:key="launch_anim" android:title="App launch animation" android:entries="@array/lanim_e" android:entryValues="@array/lanim_v" android:defaultValue="zoom" app:useSimpleSummaryProvider="true" />
+<SwitchPreferenceCompat android:key="haptic" android:title="Haptic feedback" android:defaultValue="true" />
+<ListPreference android:key="popup_menu" android:title="Long-press menu" android:entries="@array/popup_e" android:entryValues="@array/popup_v" android:defaultValue="bar" app:useSimpleSummaryProvider="true" />
+</PreferenceCategory>
+<PreferenceCategory android:title="System bars">
+<SwitchPreferenceCompat android:key="show_status" android:title="Show notification bar" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="status_transparent" android:title="Transparent notification bar" android:defaultValue="true" />
+<SwitchPreferenceCompat android:key="dark_status_icons" android:title="Dark status bar icons" android:defaultValue="false" />
+<SwitchPreferenceCompat android:key="hide_nav" android:title="Hide navigation bar" android:defaultValue="false" android:summary="Swipe from the edge to show it temporarily" />
+</PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen android:key="s_gestures" android:title="Gestures" android:summary="Swipes, pinch, double tap, icon swipes">
+<PreferenceCategory android:title="Gestures">
+<Preference android:key="g_home" android:title="Home button (already on home)" />
+<Preference android:key="g_up" android:title="Swipe up" />
+<Preference android:key="g_down" android:title="Swipe down" />
+<Preference android:key="g_up2" android:title="Two-finger swipe up" />
+<Preference android:key="g_down2" android:title="Two-finger swipe down" />
+<Preference android:key="g_double" android:title="Double tap" />
+<Preference android:key="g_dt_up" android:title="Double tap + swipe up" />
+<Preference android:key="g_dt_down" android:title="Double tap + swipe down" />
+<Preference android:key="g_pinch_in" android:title="Pinch in" />
+<Preference android:key="g_pinch_out" android:title="Pinch out" />
+<Preference android:key="g_rot_cw" android:title="Two-finger rotate clockwise" />
+<Preference android:key="g_rot_ccw" android:title="Two-finger rotate counter-clockwise" />
+<Preference android:key="access" android:title="Enable accessibility service" android:summary="Needed for Screen lock and Recent apps actions" />
+</PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen android:key="s_lock" android:title="Lock screen" android:summary="Jelly Bean lock screen">
+<PreferenceCategory android:title="Lock screen">
+<SwitchPreferenceCompat android:key="lock_enable" android:title="Jelly Bean lock screen" android:defaultValue="false" android:summary="Needs Display over other apps permission" />
+<Preference android:key="lock_preview" android:title="Preview lock screen" />
+</PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen android:key="s_backup" android:title="Backup &amp; tools" android:summary="Backup, restore, reset, wizard">
+<PreferenceCategory android:title="Backup">
+<Preference android:key="b_save" android:title="Save backup to file" />
+<Preference android:key="b_share" android:title="Share backup" />
+<Preference android:key="b_restore" android:title="Restore backup from file" />
+</PreferenceCategory>
+<PreferenceCategory android:title="Tools">
+<Preference android:key="wizard" android:title="Quick start wizard" />
+<Preference android:key="set_default" android:title="Set as default launcher" />
+<Preference android:key="restart" android:title="Restart launcher" />
+<Preference android:key="reset" android:title="Reset home screen layout" />
+<Preference android:key="reset_all" android:title="Reset everything to defaults" />
+</PreferenceCategory>
+</PreferenceScreen>
+<PreferenceScreen android:key="s_labs" android:title="Labs" android:summary="Experimental">
+<PreferenceCategory android:title="Labs">
+<SwitchPreferenceCompat android:key="labs_grid20" android:title="Allow grids up to 20x20" android:defaultValue="false" />
+<SwitchPreferenceCompat android:key="labs_debug" android:title="Show debug info on long-press of page dots" android:defaultValue="false" />
+<Preference android:key="labs_info" android:title="Show debug info" />
+</PreferenceCategory>
+</PreferenceScreen>
+</PreferenceScreen>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JB Launcher</string>
+    <string name="access_desc">Lets JB Launcher lock the screen and open recent apps from gestures.</string>
+</resources>
